@@ -20,8 +20,7 @@ def wake_app(driver, url):
     wait = WebDriverWait(driver, 15)
     try:
         button = wait.until(
-            EC.element_to_be_clickable((By.XPATH, "//button[contains(text(),'Yes, get this app back up')]"))
-        )
+            EC.element_to_be_clickable((By.CSS_SELECTOR, "button[data-testid='wakeup-button-viewer']")))
         print("Wake-up button found. Clicking...")
         button.click()
 
