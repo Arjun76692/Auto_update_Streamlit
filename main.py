@@ -26,10 +26,14 @@ def wake_app(driver, url):
         button.click()
 
         try:
-            wait.until(EC.invisibility_of_element_located(
-                (By.XPATH, "//button[contains(text(),'Yes, get this app back up')]")
-            ))
+            wait.until(EC.invisibility_of_element_located((By.XPATH, "//button[contains(text(),'Yes, get this app back up')]")))
+            print(f"Button disappeared, app booting...")
+    
+    # Wait for app to actually load (60 seconds max)
+            import time
+            time.sleep(60)
             print(f"App waking up ✅")
+    
         except TimeoutException:
             print(f"Button clicked but didn't disappear ❌")
             return False
