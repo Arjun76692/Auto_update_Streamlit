@@ -11,6 +11,7 @@ import os
 STREAMLIT_URLS = [
     os.environ.get("STREAMLIT_APP_URL_1", "https://mutual-fund-screener.streamlit.app/"),
     os.environ.get("STREAMLIT_APP_URL_2", "https://zomato-complaint-resolution.streamlit.app/"),
+    os.environ.get("STREAMLIT_APP_URL_2", "https://cred-smart-spend-enginegit-trr2h2xtj3r8vdd746pb5z.streamlit.app/")
 ]
 
 def wake_app(driver, url):
