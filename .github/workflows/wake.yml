@@ -26,4 +26,5 @@ jobs:
         env:
           STREAMLIT_APP_URL_1: ${{ secrets.STREAMLIT_APP_URL_1 }}
           STREAMLIT_APP_URL_2: ${{ secrets.STREAMLIT_APP_URL_2 }}
+          STREAMLIT_APP_URL_3: ${{ secrets.STREAMLIT_APP_URL_3 }}
         run: python main.py
